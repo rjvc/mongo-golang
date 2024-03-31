@@ -16,10 +16,10 @@ type UserController struct {
 }
 
 func NewUserController(s *mgo.Session) {
-	return &UserController{s}
+	//return &UserController{s}
 }
 
-func (uc UserController) GetUsers(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+func (uc UserController) GetUsers(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 	id := p.ByName("id")
 	if !bson.IsObjectIdHex(id) {
 		w.WriteHeader(http.StatusNotFound)

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"_/mongo-golang/controllers"
+	"mongo-golang/controllers"
 	"net/http"
 
 	"github.com/julienschmidt/httprouter"
